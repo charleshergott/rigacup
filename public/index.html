@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Firebase Hosting</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/11.0.1/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/11.0.1/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/11.0.1/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <style media="screen">
+    body {
+      background: #ECEFF1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #message {
+      background: white;
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #message p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #message a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #message,
+    #message a {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      body,
+      #message {
+        margin-top: 0;
+        background: white;
+        box-shadow: none;
+      }
+
+      body {
+        border-top: 16px solid #ffa100;
+      }
+    }
+  </style>
+
+  <title>About us</title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/camera.css">
+  <link rel="stylesheet" href="css/touchTouch.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.1.1.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/superfish.js"></script>
+  <script src="js/jquery.equalheights.js"></script>
+  <script src="js/jquery.mobilemenu.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.ui.totop.js"></script>
+  <script src="js/camera.js"></script>
+  <script src="js/touchTouch.jquery.js"></script>
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <script src="js/jquery.mobile.customized.min.js"></script>
+  <!--<![endif]-->
+  <script>
+    $(document).ready(function () {
+      /*carousel*/
+      jQuery('#camera_wrap').camera({
+        loader: false,
+        pagination: true,
+        minHeight: '200',
+        thumbnails: false,
+        height: '45.125%',
+        caption: false,
+        navigation: false,
+        fx: 'mosaic'
+      });
+      $('.gallery a.gal').touchTouch();
+      $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+
+  </script>
+
+
+  <!--[if lt IE 8]>
+      <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+          <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+     </div>
+     <![endif]-->
+  <!--[if lt IE 9]>
+     <script src="js/html5shiv.js"></script>
+     <link rel="stylesheet" media="screen" href="css/ie.css">
+
+
+     <![endif]-->
+</head>
+
+<body class="page1" id="top">
+  <!--==============================header=================================-->
+
+  <div class="slider_wrapper ">
+    <div id="camera_wrap" class="">
+      <div data-src="images/slide.jpg">
+      </div>
+      <div data-src="images/slide1.jpg">
+      </div>
+      <div data-src="images/slide2.jpg">
+      </div>
+    </div>
+
+    <header>
+      <div id="stuck_container">
+
+        <div class="container">
+          <div class="row">
+            <div class="grid_12">
+              <h1>
+                <a href="index.html">
+                  <img src="images/logo.png" alt="Your Happy Family">
+                </a>
+              </h1>
+              <div class="menu_block ">
+                <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                  <ul class="sf-menu">
+                    <li class="current"><a href="index.html">About us</a>
+                      <ul>
+                        <li><a href="#">our history</a></li>
+                        <li><a href="#">staff</a></li>
+                        <li><a href="#">news</a>
+                          <ul>
+                            <li><a href="#">fresh</a></li>
+                            <li><a href="#">archive</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="index-1.html">News &amp; Events </a></li>
+                    <li><a href="index-2.html">Players</a></li>
+                    <li><a href="index-3.html">Blog</a></li>
+                    <li><a href="index-4.html">Contacts</a></li>
+                  </ul>
+                </nav>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="page1_block">
+    <div class="container">
+      <div class="row">
+        <div class="grid_4">
+          <div class="block1">
+            <div class="title">Venues and dates updates<span>EuroHockey Indoor Championships</span></div>
+            Nasetat miaser sams trsusera neuctus aloecase magna oncumsan eras maleonuris fermen. <br>
+            <a href="#" class="info">INFORMATION BULLETIN</a>
+          </div>
+        </div>
+        <div class="grid_8">
+          <div class="grid_4 alpha">
+            <div class="block2">
+              <div class="count">1.</div>
+              <div class="extra_wrapper">
+                <div class="title"><a href="#">Group Tickets</a></div>
+                Nertyase riti masertas lertyarsasety kertya asetsetyas aplicabo nerafaes.
+              </div>
+            </div>
+            <div class="block2">
+              <div class="count">2.</div>
+              <div class="extra_wrapper">
+                <div class="title"><a href="#">Upcoming Games</a></div>
+                Kertasse asertas lertyarsriti asety kertya aset bfrasa plicabo nerafaes kertyu ersvitae.
+              </div>
+            </div>
+          </div>
+          <div class="grid_4 ">
+            <div class="block2">
+              <div class="count">3.</div>
+              <div class="extra_wrapper">
+                <div class="title"><a href="#">Statistics</a></div>
+                Matseariti masertas lertydes paset aplicabo nerafaes lasertyus ersvitae ertyasnemo.
+              </div>
+            </div>
+            <div class="block2">
+              <div class="count">4.</div>
+              <div class="extra_wrapper">
+                <div class="title"><a href="#">Our Sponsors</a></div>
+                Fertasa riti masertas lertya sea caplicabo nerafaes asetyseda kertyade asetkery.
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="alright"><a href="#" class="info">view more info</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slogan">
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+          <img src="images/page1_img.jpg" alt="">
+          <div class="extra_wrapper">
+            <div class="title col1">Hockey is our life</div>
+            Beciegast nveriti vitaesaert asety kertya aset aplicaboserde nerafae lorem ipsumd oleiuyase ipsumertrias
+            dolore. Vertyu erauas aitaesa ertyasneo eniptaiades. volernatur auteas delrytas miase oditau nsequuntur
+            magni dolores eo qui ratione voluptate. <br>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <!--==============================Content=================================-->
+    <div class="content gallery">
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <h2>photo gallery</h2>
+          </div>
+          <div class="grid_3"><a href="images/big1.jpg" class="gal"><img src="images/page1_img1.jpg" alt=""></a></div>
+          <div class="grid_3"><a href="images/big2.jpg" class="gal"><img src="images/page1_img2.jpg" alt=""></a></div>
+          <div class="grid_3"><a href="images/big3.jpg" class="gal"><img src="images/page1_img3.jpg" alt=""></a></div>
+          <div class="grid_3"><a href="images/big4.jpg" class="gal"><img src="images/page1_img4.jpg" alt=""></a></div>
+          <div class="clear"></div>
+          <div class="grid_12">
+            <div class="hor"></div>
+          </div>
+          <div class="clear"></div>
+          <div class="grid_3">
+            <h2 class="head1">Fresh news</h2>
+            <div class="text1 col2"><a href="#">12.10.14 seriasde miuase katser</a>
+            </div>
+            Beciegast nveriti vitaesaert kytars lertya asety kertya aset aplioserde fae kertyrauas vitaesa ertyayseas
+            aeslades muytaseas snemo eniptaiades. <br>
+            <a href="#" class="btn">more news</a>
+          </div>
+          <div class="grid_6 preffix_1">
+            <h2 class="head1">Executive board minutes</h2>
+            <ul class="list col2">
+              <li><a href="#">2013 EHF Executive Board Minutes, Brussels, 20th-21st September</a></li>
+              <li><a href="#">2013 Executive Board Minutes Brussels, Belgium 15th August</a></li>
+              <li><a href="#">2013 Executive Board Minutes, Rome, Italy, 8th-9th June</a></li>
+              <li><a href="#">2013 Executive Board Minutes, 8th – 9th March</a></li>
+            </ul>
+            <a href="#" class="btn">view more</a>
+          </div>
+          <div class="grid_2">
+            <address class="add1">
+              <img src="images/icon.png" alt="">
+              28 Jackson Blvd Ste 1020 <br>
+              Chicago <br>
+              IL 60604-2340<br>
+              <a href="#" class="col3">info@demolink.org</a>
+            </address>
+            <a href="#" class="col3 book">on-line form</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--==============================
+footer
+=================================-->
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+          <div class="f_top">
+            <div class="fright">
+              <div class="title">Follow Us</div>
+              sytasertya aset aplicaboes kerasaer
+            </div>
+            <div class="socials">
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-google-plus"></a>
+              <a href="#" class="fa fa-rss"></a>
+            </div>
+            <ul class="f_menu">
+              <li class="current"><a href="index.html">About us</a></li>
+              <li><a href="index-1.html">News &amp; Events </a></li>
+              <li><a href="index-2.html">Players</a></li>
+              <li><a href="index-3.html">Blog</a></li>
+              <li><a href="index-4.html">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="copy"> &copy; <span id="copyright-year"></span> <strong>&bull;</strong> <a
+              href="index-5.html">Privacy Policy</a> <!--{%FOOTER_LINK} -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+
+
+
+<!-- <body>
+  <div id="message">
+    <h2>Welcome</h2>
+    <h1>Firebase Hosting Setup Complete</h1>
+    <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something
+      extraordinary!</p>
+    <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  </div>
+  <p id="load">Firebase SDK Loading&hellip;</p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.firestore().doc('/foo/bar').get().then(() => { });
+      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      // firebase.analytics(); // call to activate
+      // firebase.analytics().logEvent('tutorial_completed');
+      // firebase.performance(); // call to activate
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body> -->
+
+</html>
